@@ -6,11 +6,14 @@
 
 |       Working        | Currently in Development | Missing  |
 | :------------------: | :---------------: | :------: |
-| `pinMode(pin, MODE)` |   `digitalRead`   | a lot :/ |
+| `pinMode(pin, MODE)` |   `delay`   | a lot :/ |
 `void setup()`
 `digitalWrite(pin, HIGH/LOW)`
 `tone() & noTone()`
 `void loop()`
+`digitalRead(pin)`
+`analogRead(pin)`
+`analogWrite(pin, value)`
 
 ## <u>ToDo</u>
 
