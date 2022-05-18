@@ -6,7 +6,7 @@
 
 |       Working        | Currently in Development | Missing  |
 | :------------------: | :---------------: | :------: |
-| `pinMode(pin, MODE)` |   `delay`   | a lot :/ |
+| `pinMode(pin, MODE)` | `LCD` using I<sup>2</sup>C | a lot :/ |
 `void setup()`
 `digitalWrite(pin, HIGH/LOW)`
 `tone() & noTone()`
@@ -14,6 +14,9 @@
 `digitalRead(pin)`
 `analogRead(pin)`
 `analogWrite(pin, value)`
+`delay()`
+`Variable Storing`
+
 
 ## <u>ToDo</u>
 
