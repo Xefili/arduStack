@@ -1,5 +1,5 @@
-import sys
-import colorama
+import sys 
+import colorama as c
 
 
 args = sys.argv
@@ -10,16 +10,15 @@ try:
     file = open(f"{args[1]}", "r", encoding="utf-8")
     output = open(f"{args[2]}", "w", encoding="utf-8")
 except FileNotFoundError:
-    print("File not found")
+    print(f"{c.Fore.RED}File not found{c.Fore.RESET}")
     exit(-5)
 finally:
     pass
 
 
 class keyword():
-    keywords = ["setup", "setPin", "tone", "noTone", "end", "loop"]
     i = 1
-    def s(file, output):
+    def compile(file, output):
         currentLine = file.read()
         l = str(currentLine).split()
         print(l)
@@ -65,7 +64,7 @@ class keyword():
 
 
 
-keyword.s(file, output)
+keyword.compile(file, output)
 
 
 file.close()
