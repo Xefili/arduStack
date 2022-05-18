@@ -55,6 +55,25 @@ class keyword():
                 output.write(f"Serial.print({l[i+1]})")
             elif l[i] == "s_println":
                 output.write(f"Serial.println({l[i+1]})")
+            elif l[i] == "for":
+                output.write(f"for({l[i+1]}; {l[i+2]}; {l[i+3]})" + "{\n")
+            elif l[i] == "if":
+                if l[i+1] == "o":
+                    output.write(f"if({l[i+2]}=={l[i+3]})" + "{\n")
+                if l[i+3] == "and":
+                    output.write(f"if({l[i+2]}=={l[i+3]} && {l[i+4]}=={l[i+5]})" + "{\n")
+                if l[i+3] == "or":
+                    output.write(f"if({l[i+2]}=={l[i+3]} || {l[i+4]}=={l[i+5]})" + "{\n")
+                if l[i+1] == "x":
+                    output.write(f"if({l[i+2]}!={l[i+3]})" + "{\n")
+                if l[i+1] == "xand":
+                    output.write(f"if({l[i+2]}!={l[i+3]} && {l[i+4]}=={l[i+5]})" + "{\n")
+                if l[i+1] == "xor":
+                    output.write(f"if({l[i+2]}!={l[i+3]} || {l[i+4]}=={l[i+5]})" + "{\n")
+                if l[i+1] == "xxand":
+                    output.write(f"if({l[i+2]}!={l[i+3]} && {l[i+4]}!={l[i+5]})" + "{\n")
+                if l[i+1] == "xxor":
+                    output.write(f"if({l[i+2]}!={l[i+3]} || {l[i+4]}!={l[i+5]})" + "{\n")
 
 # Digitals
 

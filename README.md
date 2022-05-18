@@ -7,7 +7,7 @@
 |       Working        | Currently in Development | Missing  |
 | :------------------: | :---------------: | :------: |
 | `pinMode(pin, MODE)` | `LCD` using I<sup>2</sup>C | a lot :/ |
-`void setup()`
+`void setup()` | `while loop`
 `digitalWrite(pin, HIGH/LOW)`
 `tone() & noTone()`
 `void loop()`
@@ -16,13 +16,15 @@
 `analogWrite(pin, value)`
 `delay()`
 `Variable Storing`
+`for loop`
+`if statements`
 
 
 ## <u>ToDo</u>
 
 - [x] Working Compiler
 - [x] CLI-based Compiler
-- [ ] Documentation
+- [x] Documentation
 
 ## Exit Codes
 
