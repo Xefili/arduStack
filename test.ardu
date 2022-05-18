@@ -1,7 +1,0 @@
-int i 12
-setup
-setPin 6 OUTPUT
-end
-loop
-d_write on 6
-end
