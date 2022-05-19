@@ -6,8 +6,8 @@
 
 |       Working        | Currently in Development | Missing  |
 | :------------------: | :---------------: | :------: |
-| `pinMode(pin, MODE)` | `LCD` using I<sup>2</sup>C | a lot :/ |
-`void setup()` | `while loop`
+| `pinMode(pin, MODE)` |  | not much :)
+`void setup()` |
 `digitalWrite(pin, HIGH/LOW)`
 `tone() & noTone()`
 `void loop()`

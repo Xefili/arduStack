@@ -1,6 +1,7 @@
 import sys 
 import colorama as c
 from time import sleep
+import re
 
 args = sys.argv
 print(args)
@@ -26,7 +27,8 @@ class keyword():
     i = 1
     def compile(file, output):
         currentLine = file.read()
-        l = str(currentLine).split()
+        o = str(currentLine)
+        l = o.split(" ", o)
         print(l)
         i=0
         progress_bar(i, len(l))
@@ -74,6 +76,8 @@ class keyword():
                     output.write(f"if({l[i+2]}!={l[i+3]} && {l[i+4]}!={l[i+5]})" + "{\n")
                 if l[i+1] == "xxor":
                     output.write(f"if({l[i+2]}!={l[i+3]} || {l[i+4]}!={l[i+5]})" + "{\n")
+            elif l[i] == "while":
+                output.write(f"while({l[i+1]})" + "{\n")
 
 # Digitals
 
@@ -131,11 +135,30 @@ class keyword():
                 if l[i+2] != ".":
                     output.write(f"byte {l[i+1]} = {l[i+2]}")
 
+# LCD
+
+            elif l[i] == "lcd_init":
+                output.write(f"lcd.init()")
+            elif l[i] == "lcd_clear":
+                output.write(f"lcd.clear()")
+            elif l[i] == "lcd_setCur":
+                output.write(f"lcd.setCursor({l[i+1]}, {l[i+2]})")
+            elif l[i] == "lcd_print":
+                output.write(f"lcd.print({l[i+1]})")
+            elif l[i] == "lcd_bLigh":
+                if l[i+1] == "on":
+                    output.write(f"lcd.backlight()")
+                if l[i+1] == "off":
+                    output.write(f"lcd.noBacklight()")
+            elif l[i] == "lcd_println":
+                output.write(f"lcd.println({l[i+1]})")
+            elif l[i] == "LQ_lcd":
+                output.write(f"LiquidCrystal_I2C lcd({l[i+1]}, {l[i+2]}, {l[i+3]})")
+
 
 
 keyword.compile(file, output)
 print(c.Fore.GREEN + "Compiled Successfully" + c.Fore.RESET)
-
 
 file.close()
 output.close()
