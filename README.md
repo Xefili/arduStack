@@ -1,6 +1,7 @@
 # ArduStack Programming Laungage
 ### ArduStack is a stack based version of the Arduino C++ Language implemented in Python.
 
+This project will be revisited soon!
 
 ## <u>Current Features</u>
 
@@ -22,13 +23,12 @@
 
 ## <u>ToDo</u>
 
-- [x] Working Compiler
+- [] Working Compiler
 - [x] CLI-based Compiler
-- [x] Documentation
+- [] Documentation
 
 ## Exit Codes
 
 - 0: Success
 - 1: Genral Error
-- -5: File Not Found
-- -4: Syntax Error <sup>in Input file</sup>
+- 2: File not found (tbi)
